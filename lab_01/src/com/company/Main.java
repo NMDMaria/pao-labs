@@ -15,5 +15,7 @@ public class Main {
         tema1.ex1(n);
         System.out.println(tema1.ex3(n));
         System.out.println(tema1.ex4(n));
+        int[] v = {1,3,5,6,6};
+        tema1.ex5(v);
     }
 }

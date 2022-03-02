@@ -1,5 +1,7 @@
 package com.company.exercitii;
 
+import java.util.Arrays;
+
 public class Exercitii {
     public Exercitii() {
     }
@@ -47,7 +49,19 @@ public class Exercitii {
 
     public void ex5(int[] v)
     {
+        int[] pare = new int[v.length];
+        int[] impare = new int[v.length];
+        int nrpare = 0, nrimpare = 0;
+        for (int elem:v)
+        {
+            if (elem%2 == 0)
+            {
+                pare[nrpare++] = elem;
+            }
+            else impare[nrimpare++] = elem;
+        }
 
-
+        System.out.println(Arrays.toString(pare));
+        System.out.println(Arrays.toString(impare));
     }
 }
