@@ -9,13 +9,31 @@ public class Main {
 
     public static void main(String[] args) {
         Exercitii tema1 = new Exercitii();
+        System.out.println("Alegeti un ex 1-6: ");
+        int opt;
         Scanner s = new Scanner(System.in);
-        System.out.print("Enter your number: ");
-        int n = s.nextInt();
-        tema1.ex1(n);
-        System.out.println(tema1.ex3(n));
-        System.out.println(tema1.ex4(n));
-        int[] v = {1,3,5,6,6};
-        tema1.ex5(v);
+        opt = s.nextInt();
+
+        switch (opt)
+        {
+            case 1:
+                tema1.ex1(); break;
+            case 2:
+                System.out.println("Introduceti 2 numere: ");
+                int a, b;
+                a = s.nextInt(); b = s.nextInt();
+                System.out.println(tema1.ex2(a,b) + " este mai mare.");
+                break;
+            case 3:
+                System.out.println(tema1.ex3()); break;
+            case 4:
+                System.out.println(tema1.ex4()); break;
+            case 5:
+                tema1.ex5(); break;
+            case 6:
+                tema1.ex6(); break;
+            default:
+                System.out.println("Optiune invalida.");
+        }
     }
 }
